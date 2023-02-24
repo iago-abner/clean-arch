@@ -7,4 +7,7 @@ export class UserInMemory implements IUserRepository {
     this.items.push(user)
   }
 
+  async findAll(): Promise<User[]> {
+    return this.items
+  }
 }
